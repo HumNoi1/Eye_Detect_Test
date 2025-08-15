@@ -154,24 +154,14 @@ def build_datasets(
             val_ds = val_test_ds
             test_ds = None
 
-    # เพิ่ม normalize + augmentation ลงใน pipeline
-    normalization = tf.keras.layers.Rescaling(1.0 / 255.0)
-    AUTOTUNE = tf.data.AUTOTUNE
-
     def add_map(ds, training=False):
-        def norm_map(x, y):
-            return normalization(x), y
-
-        ds = ds.map(norm_map, num_parallel_calls=AUTOTUNE)
         if training:
-            aug = tf.keras.Sequential(
-                [
-                    tf.keras.layers.RandomFlip("horizontal"),
-                    tf.keras.layers.RandomRotation(0.05),
-                    tf.keras.layers.RandomZoom(0.1),
-                    tf.keras.layers.RandomContrast(0.1),
-                ]
-            )
+            aug = tf.keras.Sequential([
+                tf.keras.layers.RandomFlip("horizontal"),
+                tf.keras.layers.RandomRotation(0.05),
+                tf.keras.layers.RandomZoom(0.1),
+                tf.keras.layers.RandomContrast(0.1),
+            ])
             ds = ds.map(lambda x, y: (aug(x, training=True), y),
                         num_parallel_calls=AUTOTUNE)
         return ds.cache().prefetch(AUTOTUNE)
