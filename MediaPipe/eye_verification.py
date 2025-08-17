@@ -219,19 +219,22 @@ if __name__ == "__main__":
     # --- ตั้ง path ตัวอย่าง ---
     # enrollment: ภาพของ "บุคคล A" หลายใบ
     enroll_paths = [
-        "data/enroll/IMG_0020.JPEG",
-        "data/enroll/IMG_0021.JPEG",
-        "data/enroll/IMG_0022.JPEG",
-        "data/enroll/IMG_0023.JPEG",
-        "data/enroll/IMG_0024.JPEG",
-        "data/enroll/IMG_0025.JPEG",
-        "data/enroll/IMG_0026.JPEG",
-        "data/enroll/IMG_0027.JPEG",
-        "data/enroll/IMG_0028.JPEG",
-        "data/enroll/IMG_0029.JPEG"
+        "data/enroll/IMG_0006.JPEG",
+        "data/enroll/IMG_0007.JPEG",
+        "data/enroll/IMG_0008.JPEG",
+        "data/enroll/IMG_0009.JPEG",
+        "data/enroll/IMG_0010.JPEG",
+        "data/enroll/IMG_0011.JPEG",
+        "data/enroll/IMG_0012.JPEG",
+        "data/enroll/IMG_0013.JPEG",
+        "data/enroll/IMG_0014.JPEG",
+        "data/enroll/IMG_0015.JPEG",
+        "data/enroll/IMG_0016.JPEG",
+        "data/enroll/IMG_0017.JPEG",
+        "data/enroll/IMG_0018.JPEG"
     ]
     # query: ภาพที่อยากเช็คว่าใช่ A ไหม
-    query_path = "data/verify/IMG_5645.JPEG"
+    query_path = "data/verify/534998531_688128504234928_6133272069536671347_n.jpg"
     which_eye = "left"  # หรือ "right"
 
     # โหลดภาพ
@@ -263,7 +266,7 @@ if __name__ == "__main__":
     # เกณฑ์เบื้องต้น (ต้องปรับตามข้อมูลจริงของคุณ)
     # ยิ่ง "ต่ำ" ยิ่งคล้าย: ปกติถ้าเป็น IR แท้ ๆ เราจะตั้ง ~0.3 หรือต่ำกว่านั้น
     # สำหรับ RGB ทดลอง อาจเห็นค่า 0.35-0.45 ยังพอรับได้ (ต้องลองวัดบนชุดข้อมูลของคุณ)
-    THRESH = 0.40
+    THRESH = 0.45
 
     print(f"Hamming distance = {dist:.4f}")
     if dist < THRESH:

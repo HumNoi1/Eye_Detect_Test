@@ -4,3 +4,4 @@ tensorflow[and-cuda]
 keras
 pandas
 scikit-learn
+keras-facenet
