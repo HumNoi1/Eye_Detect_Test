@@ -2,4 +2,4 @@
 venv
 eye_dataset
 __pycache__/
-*.pyc
+data
