@@ -4,3 +4,6 @@ eye_dataset
 __pycache__/
 dataset
 data
+detect
+video
+knowns
