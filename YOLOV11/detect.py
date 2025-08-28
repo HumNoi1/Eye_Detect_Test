@@ -11,7 +11,7 @@
 from ultralytics import YOLO
 
 # โหลดโมเดล
-model = YOLO('runs/detect/train/weights/best.pt')
+model = YOLO('runs/detect2/train/weights/best.pt')
 
 # predict ทั้งโฟลเดอร์ แล้วเซฟผลใน runs/detect/test/
 results = model.predict(

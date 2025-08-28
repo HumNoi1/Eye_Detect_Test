@@ -8,12 +8,9 @@ train_results = model.train(
     epochs=100,
     imgsz=640,
     device="0",
-    workers=2,
+    workers=8,
     cache=True,
     batch=-1,  # auto batch size
-    project="runs/detect",
-    name="train"
 )
 
 metrics = model.val()
-print(metrics)
