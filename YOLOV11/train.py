@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO('yolo11n.pt')  # load a pretrained YOLOv11n model
+model = YOLO('yolov9t.pt')  # load a pretrained YOLOv9c model
 
 # Train the model
 train_results = model.train(
