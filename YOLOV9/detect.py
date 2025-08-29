@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO('yolov9t.pt')  # load a pretrained YOLO model
+model = YOLO('detect/detect3/weights/best.pt')  # load a pretrained YOLOv11n model
 
 results = model('picture/dc1ac1d3-e539-4158-9c4a-53ee9b889909.jpeg')  # predict on an image
 #results = model('dataset/test/images/IMG_3431_jpg.rf.27d9c29998b0b8f7c71033a1a6755f63.jpg')

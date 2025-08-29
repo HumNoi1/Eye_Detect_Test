@@ -5,7 +5,7 @@ from ultralytics import YOLO
 # -----------------------------
 # ตั้งค่า
 # -----------------------------
-MODEL_PATH = "runs/detect/train/weights/best.pt"
+MODEL_PATH = "best_YOLOV9m.pt"
 CONF_THRES = 0.25
 
 # โหลดโมเดล
