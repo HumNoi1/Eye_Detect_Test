@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO('yolov9t.pt')  # load a pretrained YOLOv9t model
+model = YOLO('yolov11n.pt')  # load a pretrained YOLOv11n model
 
 # Train the model
 train_results = model.train(
@@ -11,7 +11,6 @@ train_results = model.train(
     workers=8,
     cache=True,
     batch=-1,  # auto batch size
-    name='detect3',
 )
 
 metrics = model.val()
