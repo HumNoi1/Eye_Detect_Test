@@ -5,8 +5,8 @@ from ultralytics import YOLO
 # -----------------------------
 # ตั้งค่า
 # -----------------------------
-MODEL_PATH = "YOLOV11/train/weights/best.pt"  # ที่อยู่ไฟล์โมเดล
-CONF_THRES = 0.6
+MODEL_PATH = "detect/train/weights/best.pt"  # ที่อยู่ไฟล์โมเดล
+CONF_THRES = 0.25
 
 # โหลดโมเดล
 device = 0 if torch.cuda.is_available() else "cpu"
