@@ -1,3 +1,3 @@
 from ultralytics import YOLO
 
-model = YOLO("yolov8n.pt")  # Automatically downloads yolov8n.pt if not present locally
+model = YOLO("yolov11n.pt")  # Automatically downloads yolov11n.pt if not present locally

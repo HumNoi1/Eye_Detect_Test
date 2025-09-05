@@ -1,10 +1,10 @@
 from ultralytics import YOLO
 
-model = YOLO('yolov8n.pt')  # load a pretrained YOLOv8n model
+model = YOLO('yolo11n.pt')  # load a pretrained YOLOv11n model
 
 # Train the model
 train_results = model.train(
-    data='dataset/data.yaml',
+    data='/home/humnoi1/Documents/Dataset/data.yaml',
     epochs=100,
     imgsz=640,
     device="0",
