@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO('yolo11n.pt')  # load a pretrained YOLOv11n model
+model = YOLO('yolov8n.pt')  # load a pretrained YOLOv8n model
 
 # Train the model
 train_results = model.train(
@@ -10,7 +10,7 @@ train_results = model.train(
     device="0",
     workers=8,
     cache=True,
-    batch=-1,  # auto batch size
+    batch=24,  # adjust based on your GPU memory
 )
 
 metrics = model.val()
