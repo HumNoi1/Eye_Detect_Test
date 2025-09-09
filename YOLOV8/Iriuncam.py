@@ -6,8 +6,8 @@ import os
 # -----------------------------
 # ตั้งค่า
 # -----------------------------
-MODEL_PATH = "detect/train/weights/best.pt"  # ที่อยู่ไฟล์โมเดล
-CONF_THRES = 0.5
+MODEL_PATH = "best.pt"  # ที่อยู่ไฟล์โมเดล
+CONF_THRES = 0.25
 CAMERA_DEVICE = "/dev/video0"                # เปลี่ยนให้ตรงกับ Iriun ของคุณ
 
 # สเกลการแสดงผล (ย่อเฉพาะตอนโชว์ ไม่กระทบที่ส่งเข้าโมเดล)
