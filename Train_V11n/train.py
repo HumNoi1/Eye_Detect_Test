@@ -4,7 +4,7 @@ model = YOLO('yolo11n.pt')  # load a pretrained YOLOv11n model
 
 # Train the model
 train_results = model.train(
-    data='/home/Documents/Dataset/data.yaml',  # path to your dataset config file
+    data='data.yaml',  # path to your dataset directory
     epochs=100,
     imgsz=640,
     device="0",
