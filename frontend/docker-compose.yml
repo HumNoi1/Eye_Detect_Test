@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      # ส่ง build-arg ได้ถ้าต้องฝังค่าบางตัวตอน build
+      # args:
+      #   NEXT_PUBLIC_API_URL: "https://api.yourdomain.com"
+    ports:
+      - "3000:3000"
+    environment:
+      # ค่านี้ “รันไทม์” ใช้ได้เฉพาะฝั่ง server components/headers (ถ้ามี)
+      - NODE_ENV=production
+      # - NEXT_PUBLIC_API_URL=https://api.yourdomain.com  # ถ้าจะให้ฝัง ต้องส่งเป็น build-arg ตอน build
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
